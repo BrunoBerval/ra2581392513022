@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Comportamento de Rolagem Suave Global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Personalização da Barra de Rolagem (Scrollbar) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* slate-100 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* slate-400 */
+}
+
+/* Ajuste de seleção de texto para combinar com o tema */
+::selection {
+  background-color: #dbeafe; /* blue-100 */
+  color: #1e40af; /* blue-800 */
+}
+
+/* Utilitário para garantir que as âncoras (links) 
+   parem um pouco antes do título por causa da Navbar fixa */
+section {
+  scroll-margin-top: 100px;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900;
+}

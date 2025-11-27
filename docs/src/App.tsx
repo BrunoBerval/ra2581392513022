@@ -1,28 +1,24 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-//import Footer from './components/Footer';
-//import About from './components/About';
-//import Contact from './components/Contact';
-import './App.css'; // Importe o arquivo CSS aqui
+import { Navbar } from './components/layout/Navbar';
+import { Hero } from './components/sections/Hero';
+import { About } from './components/sections/About';
+import { Portfolio } from './components/sections/Portfolio';
+import { Skills } from './components/sections/Skills';
+import { Contact } from './components/sections/Contact';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div>
-      <Header />
+    <div className="font-sans text-slate-900 bg-white selection:bg-blue-100 selection:text-blue-900">
+      <Navbar />
+      
       <main>
         <Hero />
+        <About />
         <Skills />
-        <Projects />
-        {/* Você pode adicionar os componentes de About e Contact aqui */}
-        {/* <About /> */}
-        {/* <Contact /> */}
+        <Portfolio />
+        <Contact />
       </main>
-       {/* <Footer /> */}
     </div>
   );
-};
+}
 
 export default App;
